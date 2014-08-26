@@ -2,7 +2,7 @@
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
-Creates an opaque white 2x2 texture. These are often used when drawing filled lines and rectangles with quad/sprite batchers, as it allows us to use the same texture-based shader as the rest of the batch.
+Creates an opaque white 2x2 texture. This is often used as an optimization when drawing colored and filled lines/rectangles alongside textured sprites, as it allows us to use the same shader.
 
 ```js
 var tex = require('gl-white-texture')(gl)
@@ -17,7 +17,7 @@ tex.bind()
 
 ### `tex = createWhiteTexture(gl)`
 
-Creates and returns a new 2x2 RGBA texture using an unsigned byte array.
+Creates and returns a new 2x2 RGBA texture using an unsigned byte array filled with `0xFF` bytes.
 
 ## License
 
